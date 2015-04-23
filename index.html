@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Overcoming the FUD</title>
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/default.css" id="theme">
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+	<style type="text/css">
+		.banner { z-index: 100 }
+		.banner .text { text-align: center; font-family: Lato, sans-serif;}
+
+		.ribbon .banner::after,
+		.ribbon .banner::before {
+			background-color: #6d1b06
+		}
+		.ribbon .text::before,
+		.ribbon .text::after,
+		.no-css-transforms .ribbon .text {
+			background-color: #a52808
+		}
+
+		pre { position: relative; }
+
+    .reveal .slides section .fragment.hidden {
+      opacity: 0;
+    }
+    .reveal .slides section .fragment.hidden.visible {
+      opacity: 1;
+    }
+    .center {
+      text-align: center;
+    }
+    section img.clean {
+			background: none;
+			border: none;
+			box-shadow: none;
+    }
+    section img.full {
+    	width: 100%;
+    }
+    .shaded {
+    	text-shadow:
+    		1px 1px #000,
+    		1px 1px #000,
+    		1px 1px #000,
+    		1px 1px #000;
+    }
+    .reveal p.text {
+    	font-size: 22px;
+    	text-align: left;
+    	max-width: 700px;
+    	padding: 10px 200px;
+    }
+	</style>
+	<script src="/js/jquery.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$("[data-ribbon]").each(function(i, element) {
+				var ribbonText = $(element).data().ribbon
+				var ribbonStyle = $(element).data().ribbonStyle || ""
+				var ribbon = $('<div class="ribbon '+ribbonStyle+'"><div class="banner"><div class="text">'+ribbonText+'</div></div></div>')
+				ribbon.prependTo(element)
+			})
+		})
+	</script>
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<section>
+					<h1>Overcoming the FUD</h1>
+					<p>Or how gaining confidence changed the way I code.</p>
+					<aside class="notes">
+						FUD = Fear Uncertainty Doubt
+					</aside>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h1>Actionscript</h1>
+					<aside class="notes">
+						Started my programming career about 10 years ago doing Flash development in Actionscript.
+						It was around the time Actionscript 2.0 was released together with Flash 6.
+					</aside>
+				</section>
+				<section>
+					<h2>So I bought a book...</h2>
+					<img src="/images/essential-actionscript.jpg"></img>
+					<aside class="notes">
+						Written by this guy who had worked at Macromedia since 2000.
+						And I learnt a lot from this book (show code)
+					</aside>
+				</section>
+				<section>
+					<img src="/images/colin-moock.jpg"></img>
+					<blockquote>Colin Moock is a Flash and ActionScript expert, considered an 'ActionScript guru' - Wikipedia</blockquote>
+					<aside class="notes">
+						So naturally, being a noob, I took his words as gospel.<br>
+						And I tried to follow what he teached.<br>
+						At the same time I started feeling more and more that
+						I was writing a lot of code which neither expressed anything
+						useful, nor did it seem to add any necessary logic.
+					</aside>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h1>Ruby (on Rails)</h1>
+				</section>
+				<section data-background="/images/mind-blown.gif" data-background-repeat="repeat">
+					<img src="/images/ruby-logo.gif" class="clean"></img><br>
+					<ul>
+						<li class="shaded">Optimized for programmer happiness!</li>
+						<li class="fragment shaded">Meta programming!</li>
+						<li class="fragment shaded">Monkey patching!</li>
+						<li class="fragment shaded">Reads like english and expresses our thoughts!</li>
+						<li class="fragment shaded">No ceremony, all action!</li>
+						<li class="fragment shaded">No semicolons!</li>
+						<li class="fragment shaded">String has 168 public methods! <span class="fragment">And that's ok!</span></li>
+						<li class="fragment shaded">ActiveSupported String has 271 of them! <span class="fragment">Even better!</span></li>
+					</ul>
+				</section>
+				<section>
+					<img src="/images/matz.jpg"></img>
+					<blockquote>MINSWAN<br>Matz Is Nice So We're Nice</blockquote>
+				</section>
+				<section>
+					<img src="/images/why2.jpg"></img>
+					<blockquote style="width: 80%">I’ll be straight with you. I want you to cry. To weep. To whimper sweetly. This book is a <strong>poignant</strong> guide to Ruby. That means code so beautiful that tears are shed.</blockquote>
+				</section>
+				<section>
+					<img src="/images/dhh.jpg" style="height: 500px;"></img>
+					<blockquote>TDD is dead.<br>Long live testing.</blockquote>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h1>ActionScript revisited</h1>
+					<p>The return of the jedi</p>
+					<aside class="notes">
+						Show code difference...
+					</aside>
+				</section>
+				<section>
+					<h2>It's not the language</h2>
+					<h3 class="fragment">It's the people and the community</h3>
+					<p class="fragment">And knocking down the barriers can be really hard.</p>
+					<aside class="notes">
+						Ruby and Javascript are fairly similar<br>
+						But the community leaders are extremely different<br>
+					</aside>
+				</section>
+				<section>
+					<div class="">
+					<p class="text">I have been until now a fervent disciple of compositing a graphic instance into a class in every case, rather than making my class extend MovieClip...
+					</p>
+					<p class="text">
+But lately my devotion has been shaken and now I am seriously considering extending MovieClip when making any class which has a visual component. Whereas before I would always compose in a MovieClip instance, almost never make my class inherit from anything but my own superclass, and implement interfaces for polymorphism, now I think I will extend, although still implement interfaces for the usual other reasons. I also still plan to be a composition devotee in all other ways - I like composition more than inheritance...</p>
+					</div>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h1>JavaScript</h1>
+					<p>The empire strikes back</p>
+				</section>
+				<section>
+					<img class="full" src="/images/semicolon1.png"></img>
+				</section>
+				<section>
+					<img class="full" src="/images/semicolon2.png"></img>
+				</section>
+				<section>
+					<img class="full" src="/images/semicolon3.png"></img>
+				</section>
+				<section>
+					<img class="full" src="/images/semicolon4-uncensored.png"></img>
+				</section>
+				<section>
+					<img src="/images/crockford.png"></img>
+					<blockquote>Each line should contain at most one statement.<br>Put a ; (semicolon) at the end of every simple statement. Note that an assignment statement that is assigning a function literal or object literal is still an assignment statement and must end with a semicolon.</blockquote>
+				</section>
+				<section>
+					<h2>But what about your ASI?</h2>
+					<blockquote class="fragment" style="width: 80%">JavaScript allows any expression to be used as a statement. This can mask some errors, particularly in the presence of semicolon insertion.<br>- Douglas Crockford</blockquote>
+					<br>
+					<blockquote class="fragment" style="width: 80%">Relying on implicit insertion can cause subtle, hard to debug problems. Don't do it. You're better than that.<br>- Google Styleguide</blockquote>
+					<aside class="notes">
+						FUD detected, conditioning and ego tactics!<br>
+						Let's learn about semicolons!
+					</aside>
+				</section>
+				<section>
+					<h2>But what happens if we omit them?</h2>
+					<pre class="fragment"><code class="javascript">clearMenus()
+!isActive && $parent.toggleClass('open')</code></pre>
+					<img class="fragment hidden" src="/images/probably-a-bug.png"></img>
+					<img class="fragment hidden" src="/images/insanely-stupid.png"></img>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h1>Conclusion</h1>
+				</section>
+				<section>
+					<p>
+						FUD is not about wether we write semicolons or not.
+					</p>
+				</section>
+				<section>
+					<p>
+						It's about wether we write code out of conditioning<br>
+						or express it in freedom through our innate creative force.
+					</p>
+				</section>
+				<section>
+					<p>
+						Community "gurus" are responsible<br>
+						for killing or inspiring creativity.
+					</p>
+					<p class="fragment hidden">
+						Let's strive to be nice, patient, accepting and encouraging.
+					</p>
+				</section>
+				<section>
+					<p>
+						And if someone is trying to bring you down...
+					</p>
+					<p class="fragment hidden">
+						Be a Jedi!
+					</p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<img class="" src="/images/yoda.jpg"></img><br><br>
+					<h2 class="fragment hidden">Thank you 💗</h2>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						Letter to a guru:
+						http://www.moock.org/blog/archives/000248.html
+
+						Semicolons technical overview:
+						http://inimino.org/~inimino/blog/javascript_semicolons
+
+						Open letter:
+						http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
+
+						Why's Poignant guide to Ruby:
+						http://mislav.uniqpath.com/poignant-guide/
+
+						Crockfords PR:
+						https://github.com/twbs/bootstrap/issues/3057
+
+						Matz is nice so we are nice:
+						http://blog.emmacodes.com/post/55841830917/minswan
+
+						JSHint asi option:
+						http://jshint.com/docs/options/#asi
+					</script>
+				</section>
+			</section>
+		</div>
+	</div>
+
+	When working with a team on a large project, making changes like this cause mass confusion and a lot of lost time.
+
+	# usernames = YoutubeFeed.pluck(:username)
+
+	usernames.uniq.sort_by(&:length).join("\n");
+
+	usernames.reduce(function(array, value) {
+		if(array.indexOf(value) < 0) array.push(value)
+		return array
+	}, []).sort(function(a, b) {
+		if(a.length < b.length) return -1
+		if(a.length > b.length) return 1
+		return 0
+	}).join("\n")
+
+	_.(usernames).uniq().sortBy(function(username) { return username.length}).join("\n")
+	_.(usernames).uniq().sortBy(_.property("length")).join("\n")
+	_.(usernames).uniq().sortBy("length").join("\n")
+
+	usernames.uniq.sortBy("length").join("\n")
+
+	# feeds = YoutubeFeed.limit(20).all
+
+	feeds.map(&:pressroom).compact.map(&:url).select { |url| open(url) rescue false }
+
+	feeds = [
+		{pressroom: {url: "http://asdf.com"}},
+		{pressroom: null},
+		{pressroom: {url: "http://broken.broken"}}
+	]
+
+	feeds
+		.map(function(feed) { return feed.pressroom })
+		.filter(function(pressroom) { return pressroom })
+		.map(function(pressroom) { return pressroom.url })
+		.filter(function(url) { return url.indexOf("broken") == -1 })
+
+	_(feeds).map("pressroom").compact().map("url").filter(function(url) { return url.indexOf("broken") == -1 }).value()
+
+	feeds.map("pressroom").compact().map("url").filter(function(url) { return url.indexOf("broken") == -1 })
+
+	Letter to a guru:
+	http://www.moock.org/blog/archives/000248.html
+
+	Semicolons technical overview:
+	http://inimino.org/~inimino/blog/javascript_semicolons
+
+	Open letter:
+	http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
+
+	Why's Poignant guide to Ruby:
+	http://mislav.uniqpath.com/poignant-guide/
+
+	Crockfords PR:
+	https://github.com/twbs/bootstrap/issues/3057
+
+	Matz is nice so we are nice:
+	http://blog.emmacodes.com/post/55841830917/minswan
+
+	JSHint asi option:
+	http://jshint.com/docs/options/#asi
+
+	Npm:
+	https://github.com/npm/npm
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.min.js"></script>
+
+	<script>
+
+	// Full list of configuration options available here:
+	// https://github.com/hakimel/reveal.js#configuration
+	Reveal.initialize({
+		width: 1140,
+    height: 900,
+		controls: true,
+		progress: true,
+		history: true,
+		center: true,
+
+		theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+		transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+		// Parallax scrolling
+		// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+		// parallaxBackgroundSize: '2100px 900px',
+
+		// Optional libraries used to extend on reveal.js
+		dependencies: [
+		{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+		{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+		{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+		{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+		]
+	});
+
+</script>
+
+</body>
+</html>
